@@ -49,7 +49,7 @@ public class Main {
         employees.add(lory);
         employees.add(hope);
 
-        VeterinaryClinic clinic = new VeterinaryClinic(employees, animals);
+        VeterinaryClinic clinic = new VeterinaryClinic();
         clinic.goables(animals);
         clinic.flyables(animals);
         System.out.println();
@@ -58,6 +58,12 @@ public class Main {
         clinic.printStaff();
         clinic.removeEmploy(lory);
         clinic.printStaff();
+        System.out.println();
+        clinic.addAnimal(sharik);
+        clinic.addAnimal(ivan);
+        clinic.printAnimal();
+        clinic.removeAnimal(ivan);
+        clinic.printAnimal();
 
     }
 }

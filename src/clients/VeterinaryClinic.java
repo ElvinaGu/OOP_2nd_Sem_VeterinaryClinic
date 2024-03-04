@@ -5,13 +5,7 @@ import java.util.List;
 
 public class VeterinaryClinic {
     List<Worker> staff = new ArrayList<>();
-    public List<Worker> employees;
-    public List<Animal> animals;
-
-    public VeterinaryClinic(List<Worker> employees, List<Animal> animals) {
-        this.employees = employees;
-        this.animals = animals;
-    }
+    List<Animal> animals = new ArrayList<>();
 
     // Добавить сотрудника в штат.
     public void addEmploy(Worker worker){
@@ -65,5 +59,25 @@ public class VeterinaryClinic {
             }
         }
         System.out.println("Летающие животные: " + flyables);
+    }
+
+    public void addAnimal(Animal animal){
+        if (!animals.contains(animal)) {
+            animals.add(animal);
+            System.out.println("Питомец на лечение добавлен.");
+        }else System.out.println("Питомец уже есть в списке на лечение.");
+    }
+
+    // Удалить сотрудника.
+    public void removeAnimal(Animal animal){
+        if (animals.contains(animal)) {
+            animals.remove(animal);
+            System.out.println("Питомец выписан.");
+        } else System.out.println("Питомец не найден.");
+    }
+
+    // Вывод списка штата сотрудников.
+    public void printAnimal(){
+        System.out.println("Список животных, назначенных на лечение: " + animals);
     }
 }
