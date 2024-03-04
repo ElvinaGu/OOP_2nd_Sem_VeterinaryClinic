@@ -61,6 +61,7 @@ public class VeterinaryClinic {
         System.out.println("Летающие животные: " + flyables);
     }
 
+    // Добавить питомца.
     public void addAnimal(Animal animal){
         if (!animals.contains(animal)) {
             animals.add(animal);
@@ -68,7 +69,7 @@ public class VeterinaryClinic {
         }else System.out.println("Питомец уже есть в списке на лечение.");
     }
 
-    // Удалить сотрудника.
+    // Удалить питомца.
     public void removeAnimal(Animal animal){
         if (animals.contains(animal)) {
             animals.remove(animal);
@@ -76,7 +77,7 @@ public class VeterinaryClinic {
         } else System.out.println("Питомец не найден.");
     }
 
-    // Вывод списка штата сотрудников.
+    // Вывод списка животных.
     public void printAnimal(){
         System.out.println("Список животных, назначенных на лечение: " + animals);
     }
